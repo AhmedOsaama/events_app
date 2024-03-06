@@ -21,9 +21,7 @@ class Validator {
     if (value != null) {
       value = value.trim();
       if (value.isEmpty) {
-        return "Full name is required";
-      } else if (!RegExp('[a-zA-Z]').hasMatch(value)) {
-        return "enter_correct_name";
+        return "Field cannot be empty";
       }
     }
     return null;
