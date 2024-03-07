@@ -3,16 +3,19 @@ import 'package:events_app/core/firebase_utils.dart';
 import 'package:events_app/core/style_utils.dart';
 import 'package:events_app/core/widgets/sizedbox_extension.dart';
 import 'package:events_app/features/events/presentation/views/widgets/event_widget.dart';
+import 'package:events_app/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../core/app_colors.dart';
 import '../../../data/models/Event.dart';
 
-class EventsScreenBody extends StatelessWidget {
+class EventsScreenBody extends ConsumerWidget {
   EventsScreenBody({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.watch(themeProvider);
     return StreamBuilder<QuerySnapshot<Object>>(
       stream: FirestoreUtils.firestoreEventsCollection.snapshots(),
       builder: (context, snapshot) {
@@ -32,7 +35,7 @@ class EventsScreenBody extends StatelessWidget {
             return Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+              color: theme.themeData.scaffoldBackgroundColor,
               boxShadow: const [
                 BoxShadow(color: shadowColor, blurRadius: 28, offset: Offset(0, 10)),
               ],

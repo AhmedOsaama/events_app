@@ -37,7 +37,7 @@ class _AddEventsScreenBodyState extends State<AddEventsScreenBody> {
               70.h,
               Text(
                 "Event Type",
-                style: TextStyles.textViewBold12.copyWith(color: black1),
+                style: TextStyles.textViewBold12,
               ),
               10.h,
               GenericField(
@@ -51,7 +51,7 @@ class _AddEventsScreenBodyState extends State<AddEventsScreenBody> {
               20.h,
               Text(
                 "Date",
-                style: TextStyles.textViewBold12.copyWith(color: black1),
+                style: TextStyles.textViewBold12,
               ),
               10.h,
               GenericField(
@@ -64,7 +64,7 @@ class _AddEventsScreenBodyState extends State<AddEventsScreenBody> {
               10.h,
               Text(
                 "Location",
-                style: TextStyles.textViewBold12.copyWith(color: black1),
+                style: TextStyles.textViewBold12,
               ),
               10.h,
               GenericField(
@@ -77,7 +77,7 @@ class _AddEventsScreenBodyState extends State<AddEventsScreenBody> {
               20.h,
               Text(
                 "Description",
-                style: TextStyles.textViewBold12.copyWith(color: black1),
+                style: TextStyles.textViewBold12,
               ),
               10.h,
               GenericField(

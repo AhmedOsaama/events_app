@@ -36,7 +36,7 @@ class _EventWidgetState extends State<EventWidget> {
         10.h,
         Text(
           event.location!,
-          style: TextStyles.textViewRegular14,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         Text(
           event.description!,
